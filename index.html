@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes">
     <title>Com Sylvia no Ballet</title>
     <style>
         body {
@@ -46,6 +46,24 @@ div {
   width: fit-content;
   height: fit-content;
 }
+
+.img-hover-zoom {
+  height: auto; 
+  overflow: hidden; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  max-width: 100%;
+}
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
 </style>
 </head>
     <body>
@@ -55,6 +73,8 @@ div {
             <a href="#contact">Colabore</a>
             <a href="#about">Contato</a>
           </div>
-          
+          <div class="img-hover-zoom">
+     <img src="logo.png" alt="logo" class="img-hover-zoom">   
+     </div>  
     </body>
 
