@@ -31,6 +31,7 @@
   text-align: center;
   padding: 2px 12px;
   text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 14px;
 }
 
@@ -49,11 +50,11 @@
 .img-hover-zoom {
   height: auto; 
   overflow: hidden; 
-  display: block;
+  display:block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  max-width: 100%;
+  
 }
 
 .img-hover-zoom img {
@@ -61,7 +62,7 @@
 }
 
 .img-hover-zoom:hover img {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .fa {
@@ -97,10 +98,12 @@
             <a href="#about">Contato</a>
           </div>
           <div class="img-hover-zoom">
-            <a href="index.html">
-     <img src="logo.png" alt="logo" class="img-hover-zoom">   
+     <img src="logo.png" alt="logo" class="img-hover-zoom" usemap="#image-map">
+    <map name="image-map">
+    <area target="" alt="" title="" href="index.html" coords="299,163,154" shape="circle">
+    </map>   
     </a> 
-    </div>
+    </div> 
      <br>
      <br>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -110,4 +113,24 @@
   <a href="https://www.instagram.com/sylviabarretto.ballet/" class="fa fa-instagram"></a>
   </div> 
     </body>
+    <SCRIPT LANGUAGE="JavaScript">
+      <!-- Disable
+      function disableselect(e){
+      return false
+      }
+      
+      function reEnable(){
+      return true
+      }
+      
+      //if IE4+
+      document.onselectstart=new Function ("return false")
+      document.oncontextmenu=new Function ("return false")
+      //if NS6
+      if (window.sidebar){
+      document.onmousedown=disableselect
+      document.onclick=reEnable
+      }
+      //-->
+      </SCRIPT>
 
