@@ -5,11 +5,14 @@
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes">
     <title>Com Sylvia no Ballet</title>
     <style>
-        body {
-    background-color: rgb(255, 255, 255);
+        body{
+          background: black;
+    background-color: rgb(0, 0, 0);
+    background-image:url(room.png);
+    background-attachment: fixed;
+    background-size: 1600px 900px;
+  
 }  
-      
-
         /* Cor de fundo da barra de navegação */
 .topnav {
   background-color: rgb(0, 0, 0);
@@ -53,6 +56,329 @@
   display:block;
   margin-left: 2px;
 }
+.footer-dark {
+  padding: 20px;0px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+.turmas {
+  display: block;
+  overflow: hidden;
+  block-size: 200%;
+  max-width: 100%;
+  margin-left:0px;
+}
+.Ballet-Clássico{
+  margin-left: 10px;
+}
+
+.h2 {
+  font-size: 3em;
+  font-weight: normal;
+}
+.h1 {
+  font-size: 100px;
+  font-weight: normal;
+}
+.lettering {
+font-size: 16px;
+margin-left: 20px;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-style: italic;
+}
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+          margin-left: 20px;
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  width: 9%;
+  margin-left: 20px;
+}
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+.slide-in-blurred-left {
+	-webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+          margin-left: 20px;
+}
+@-webkit-keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+.vibrate-1 {
+	-webkit-animation: vibrate-1 0.5s linear infinite both;
+	        animation: vibrate-1 1.9s linear infinite both;
+          margin-left: 20px;
+          width: 9%;
+}
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+.slide-in-blurred-top {
+	-webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+          margin-left: 20px;
+          color: white;
+          font-family: 'Courier New', Courier, monospace;
+}
+@-webkit-keyframes slide-in-blurred-top {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+            transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-top {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+            transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
 
 </style>
 </head>
@@ -64,9 +390,83 @@
             <a class="active" href="turmas.html">Turmas</a>
           </div>
           <br>
-          <br>
           <img src="turmas.png" class="turmas">
-    </body>
+          <br>
+          <h2 class="slide-in-blurred-top"><span style="background-color: #000000">
+          Ballet Clássico com Sylvia Barretto </span>
+          </h2>
+          <br>
+          <h3 class="tracking-in-expand">
+          Turmas online
+          <br>
+          </h3>
+          <div class="lettering"><span style="background-color: #ffd6fa">Quem disse que não dá para fazer aula de Ballet em casa? Clique no botão de Inscrever-se na turma desejada; você será redirecionado(a) automaticamente ao nosso e-mail de contato. O título já estará preenchido. No corpo do email, digite seu nome, idade, e me conte um pouco sobre a sua relação com o Ballet!</div>
+          </span>
+            <br>
+          <h4 class="slide-in-blurred-left">Já me inscrevi, o que fazer?</h4>
+          <div class="lettering"><span style="background-color: #ffd6fa">↘ Quando sua inscrição for confirmada, você receberá um e-mail com o link para participar da aula na data prevista.
+          </div></span>
+          <br>
+          <h4 class="tracking-in-expand">
+            Quinta-Feira, 19h às 20h - Nível Básico
+          </h4>
+          <div class="lettering"><span style="background-color: #ffd6fa">↘ Essa aula é desenvolvida para aqueles que possuem pouca ou nenhuma experiência no Ballet. Venha aprender!
+          </div></span>
+          <a href="mailto:comsylvianoballet@gmail.com?subject=Inscrição - Nível Básico">
+          <img src="botao.png" class="vibrate-1"> 
+          </a>
+            <br>
+            <br>
+            <br>
+            <h4 class="tracking-in-expand">Sábado, 15h às 16h30 - Intermediário/Avançado
+          </h4>
+          <div class="lettering"><span style="background-color: #ffd6fa"> ↘ Essa aula é desenvolvida para aqueles que já possuem uma base no Ballet, estando ativos ou inativos. Venha praticar e aprimorar-se!
+          </div></span>
+          <a href="mailto:comsylvianoballet@gmail.com?subject=Inscrição - Nível Intermediário">
+            <img src="botao.png" class="vibrate-1">
+            </a>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <div class="footer-dark">
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-6 col-md-3 item">
+                      <h3>Links úteis</h3>
+                      <ul>
+                          <li><a href="#">Calendário das Aulas</a></li>
+                          <li><a href="#">Inscreva-se</a></li>
+                          <li><a href="#">Apoie-nos</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-6 col-md-3 item">
+                      <h3>Sobre</h3>
+                      <ul>
+                          <li><a href="#">Biografia</a></li>
+                          <li><a href="#">Fotos</a></li>
+
+                      </ul>
+                  </div>
+                  <div class="col-md-6 item text">
+                      <h3>Sobre o site</h3>
+                      <p>Desenvolvido por Osvaldo Barretto F. Dias, filho, com muito orgulho e admiração pela protagonista do site. O intuito dessa página é fazer com que o nosso projeto seja alcançado por mais pessoas, assim como arrecadar fundos para a manutenção do nosso trabalho no ambiente online. Saiba mais sobre a nossa missão clicando <a href="#">aqui</a>!</p>
+                  </div>
+                  <div class="col item social"><a href="https://www.instagram.com/sylviabarretto.ballet/"><i class="icon ion-social-instagram"></i></a></div>
+              </div>
+              <p class="copyright">SLO © 2021</p>
+          </div>
+      </footer>  
+  </body>
     <SCRIPT LANGUAGE="JavaScript">
       <!-- Disable
       function disableselect(e){
