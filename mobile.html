@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Com Sylvia no Ballet</title>
     <style>
         body {
@@ -10,64 +10,14 @@
     width: 480px;
     max-width: 480px;
 }  
-/* Style The Dropdown Button */
-.dropbtn {
-  background-color: #000000;
-  color: white;
-  padding: 14px 14px;
-  font-size: 14px;
-  margin-top: 0px;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  margin-top: 0px;
-  margin-left: 0px;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #ff3180;
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 </style>
-
-<div class="dropdown">
-  <button class="dropbtn">☰</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
+<h1>Ballet Clássico com Sylvia Barretto</h1>
     </body>
 
     <SCRIPT LANGUAGE="JavaScript">
@@ -90,4 +40,21 @@
       }
       //-->
       </SCRIPT>
+      <script>
+      jQuery(function($){
 
+        $( '.menu-btn' ).click(function(){
+          $('.responsive-menu').toggleClass('expand');
+        });
+      
+        $(document).on("click", function(e){
+          if( 
+            $(e.target).closest(".responsive-menu").length == 0 &&
+            $(".responsive-menu").hasClass("expand") &&
+            $(e.target).closest(".menu-btn").length == 0
+          ){
+            $('.responsive-menu').toggleClass('expand');
+          }
+        });
+      });
+</script>
