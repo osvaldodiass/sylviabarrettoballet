@@ -12,7 +12,7 @@ body {
   max-width: 480px;
   margin: auto;
   background-color: rgb(255, 255, 255);
-  height: 500px;
+  height: 1000px;
   color: white;
   border-radius: 10px;
   background-image: url(room2.png);
@@ -57,6 +57,16 @@ body {
 	-webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 	        animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
           color:black;
+          margin-left: 10px;
+}
+.vibrate-1 {
+	-webkit-animation: vibrate-1 0.5s linear infinite both;
+	        animation: vibrate-1 1.9s linear infinite both;
+          margin-left: 10px;
+          width: 20%;
+}
+.paragrafo{
+  margin-left: 10px;
 }
 @-webkit-keyframes slide-in-blurred-left {
   0% {
@@ -98,7 +108,58 @@ body {
     opacity: 1;
   }
 }
-
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
 </style>
 </head>
 <body>
@@ -125,6 +186,14 @@ body {
   <h3>Já me inscrevi, o que fazer?</h3>
   <p>Quando sua inscrição for confirmada, você receberá um e-mail com o link para participar da aula na data prevista.</p>
 </div>
+<h2 class="slide-in-blurred-left">
+  Quinta-Feira, 19h às 20h - Nível Básico
+</h2>
+<div class="paragrafo"><span style="background-color: #adadad">Essa aula é desenvolvida para aqueles que possuem pouca ou nenhuma experiência no Ballet. Venha aprender!
+</span></p>
+<a href="mailto:comsylvianoballet@gmail.com?subject=Inscrição - Nível Básico">
+<img src="botao.png" class="vibrate-1"> 
+</a>
 
 <!-- End smartphone / tablet look -->
 </div>
