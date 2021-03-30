@@ -18,13 +18,14 @@ body {
   color: white;
 }
 .topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
+  background-color: #62dfbd;
+  display: flex;
+  order: 1;
 }
 
 .topnav #myLinks {
   display: none;
+  order: 3;
 }
 
 .topnav a {
@@ -32,25 +33,34 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  display: block; 
+  display: flex; 
+  order: 2;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: center;
 }
 
 .topnav a.icon {
   background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
+  display:flex;
+  order: 1;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 0;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(202, 255, 226);
   color: black;
 }
 
 .active {
   background-color: #62dfbd;
+  display: flex;
   color: white;
+  order: 2;
+  align-items: flex-end;
+  flex-grow: 1;
 }
 .slide-in-blurred-left {
 	-webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
@@ -311,10 +321,10 @@ p{
 <body>
 <!-- Simulate a smartphone / tablet -->
 <div class="mobile-container">
-
 <!-- Top Navigation Menu -->
 <div class="topnav">
   <a href="#home" class="active">Turmas</a>
+
   <div id="myLinks">
     <a href="#news">Início</a>
     <a href="#contact">Colabore</a>
