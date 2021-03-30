@@ -55,7 +55,9 @@ body {
 .slide-in-blurred-left {
 	-webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 	        animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-          color:black;
+          color:rgb(255, 255, 255);
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-size: 26px;
           
 }
 .vibrate-1 {
@@ -69,12 +71,14 @@ body {
   color:black;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
+  margin-left: 10px;
 }
 .paragrafo {
   margin-left: 10px;
-  font-size: 24px;
+  font-size: 16px;
   color:black;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family:monospace;
+  font-style: italic;
 }
 .header{
   color:white;
@@ -86,6 +90,12 @@ h2{
   font-size: 28px;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
+.info{
+  width:10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .banner-square{
   max-width: 750px;
   max-height: 100%;
@@ -95,6 +105,10 @@ h2{
   margin-right: auto;
   width: 375px;
 }
+p{
+  font-size: 18px;
+}
+
 .footer-dark {
   padding:50px 0;
   color:#f0f9ff;
@@ -337,7 +351,7 @@ h2{
   <img src="bannersquare.png" class="banner-square">
   <br>
   <br>
-  <h2 class="slide-in-blurred-left">Quinta-Feira, 19h às 20h - Nível Básico</h2>
+  <h2 class="slide-in-blurred-left"><span style="background-color: #000000">Quinta-Feira, 19h às 20h - Nível Básico</h2></span>
 <br>
 <div class="paragrafo2">Essa aula é desenvolvida para aqueles que possuem pouca ou nenhuma experiência no Ballet. Venha aprender!
 <br>
@@ -347,18 +361,27 @@ h2{
 </a></div>
 <br>
 <br>
-<h2 class="slide-in-blurred-left"> Sábado, 15h às 16h30 - Nível Intermediário</h2>
+<h2 class="slide-in-blurred-left"><span style="background-color: #000000"> Sábado, 15h às 16h30 - Nível Intermediário</h2></span>
 <br>
 <br>
   <div class="paragrafo2">Essa aula é desenvolvida para aqueles que já possuem uma base no Ballet, estando ativos ou inativos. Venha praticar e aprimorar-se!
   </span>
   <br>
   <br>
-  <a href="mailto:comsylvianoballet@gmail.com?subject=Inscrição - Nível Básico">
+  <a href="mailto:comsylvianoballet@gmail.com?subject=Inscrição - Nível Avançado">
   <img src="botao.png" class="vibrate-1"> 
   </a></div>
   <br>
   <br>
+  <br>
+  <img src="info.png" class="info">
+  <br>
+  <div class="paragrafo">Ao clicar em Inscrever-se, você será redirecionado(a) ao nosso e-mail, o título já estará preenchido. No corpo, me diga seu nome, idade, e me conte um pouco sobre a sua relação com o Ballet!
+  <br>
+    Você também pode ingressar via <a href="https://www.instagram.com/sylviabarretto.ballet/">Instagram!</a> Me mande um direct ;) 
+</div>
+<br>
+<br>
   <div class="footer-dark">
     <footer>
         <div class="container">
@@ -374,7 +397,7 @@ h2{
                 <div class="col-sm-6 col-md-3 item">
                     <h3>Sobre nós :)</h3>
                     <ul>
-                        <li><a href="#">Biografia</a></li>
+                        <li><a href="#">Nossa missão</a></li>
                         <li><a href="#">Fotos</a></li>
                         
                     </ul>
