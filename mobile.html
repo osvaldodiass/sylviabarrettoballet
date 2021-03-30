@@ -32,7 +32,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  display: block;
+  display: block; 
 }
 
 .topnav a.icon {
@@ -62,7 +62,7 @@ body {
 	-webkit-animation: vibrate-1 0.5s linear infinite both;
 	        animation: vibrate-1 1.9s linear infinite both;
           margin-left: 5px;
-          width: 55%;
+        width: 55%;
 }
 .paragrafo2{
   font-size: 18px;
@@ -80,6 +80,9 @@ body {
   color:white;
   text-align: center;
   font-family: "autographyregular";
+}
+h2{
+  text-align: center;
 }
 .banner-square{
   max-width: 750px;
@@ -293,7 +296,7 @@ body {
     <a href="#contact">Colabore</a>
     <a href="#about">Biografia</a>
   </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <a href="javascript:void(0);" class="icon" onclick="closemenu()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
@@ -319,19 +322,23 @@ body {
   <img src="bannersquare.png" class="banner-square">
   <br>
   <br>
-  <h2 class="slide-in-blurred-left"> Quinta-Feira, 19h às 20h - Nível Básico
-  </div>
-</h2>
-<div class="paragrafo"><span style="background-color: #ff2ca7">Essa aula é desenvolvida para aqueles que possuem pouca ou nenhuma experiência no Ballet. Venha aprender!
-</span></p>
-<a href="mailto:comsylvianoballet@gmail.com?subject=Inscrição - Nível Básico">
+  <h2 class="slide-in-blurred-left">Quinta-Feira, 19h às 20h - Nível Básico</h2>
+<br>
+<div class="paragrafo2">Essa aula é desenvolvida para aqueles que possuem pouca ou nenhuma experiência no Ballet. Venha aprender!
+<br>
+<br>
+ <a href="mailto:comsylvianoballet@gmail.com?subject=Inscrição - Nível Básico">
 <img src="botao.png" class="vibrate-1"> 
 </a></div>
 <br>
 <br>
 <h2 class="slide-in-blurred-left"> Sábado, 15h às 16h30 - Nível Intermediário</h2>
-  <div class="paragrafo"><span style="background-color: #ff2ca7">Essa aula é desenvolvida para aqueles que já possuem uma base no Ballet, estando ativos ou inativos. Venha praticar e aprimorar-se!
-  </span></p>
+<br>
+<br>
+  <div class="paragrafo2">Essa aula é desenvolvida para aqueles que já possuem uma base no Ballet, estando ativos ou inativos. Venha praticar e aprimorar-se!
+  </span>
+  <br>
+  <br>
   <a href="mailto:comsylvianoballet@gmail.com?subject=Inscrição - Nível Básico">
   <img src="botao.png" class="vibrate-1"> 
   </a></div>
@@ -369,7 +376,7 @@ body {
 </div>
 <!-- End smartphone / tablet look -->
 <script>
-function myFunction() {
+function closemenu() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
