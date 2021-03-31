@@ -6,47 +6,195 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-        /* Cor de fundo da barra de navegação */
-        .topnav {
-  background-color: rgb(0, 0, 0);
-  overflow: hidden;
-  display: block;
-  text-align: center;
-  margin: auto;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-  height: fit-content;
-  grid-area: header;
+body{
+  background-color: rgb(255, 255, 255);
+box-sizing: border-box
 }
-
-/* Estilo dos links dentro da barra de navegação */
-.topnav a {
-  margin:5px;
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 2px 12px;
+a{
   text-decoration: none;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 14px;
 }
-
-/* Muda a cor dos links ao passar o mouse */
-.topnav a:hover {
-  background-color: #62dfbd;
-  color: rgb(255, 255, 255);
+h5{
+  color:silver;
+  font-size: 16px;
 }
-
-/* Cor do link ativo */
-.topnav a.active {
+.tall{
+  height: 2000px;
+  width:100%;
+  margin-top: 100px;
+  font-size: 100px;
+  margin-left: 10px;
+}
+  
+.overlay{
+  position: fixed;
+  z-index: 1;
   background-color: #62dfbd;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+  
+  .main-nav{
+    width: 100%;
+    margin: 100px 0 0 20px;
+    position: absolute;
+    top: 20%;
+    transition: all 0.2s ease-in-out;
+  }
+    li{
+      font-size: 40px;
+      padding: 10px;
+      width: auto;
+    } 
+      a{
+        color: rgb(255, 255, 255);
+  }
+.nav-toggle{
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  z-index: 2;
+}
+  .toggle-botton{
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+    .middle{
+      width: 60%;
+      height: 3px;
+      opacity: 1;
+      position: absolute;
+      background-color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .top-left{
+      width: 30%;
+      height: 3px;
+      position: absolute;
+      background-color: white;
+      top: 30%;
+      left: 50%;
+      transform: translate(-100%,-50%);
+      transition: all 0.2s ease-in-out;
+    }
+    .top-right{
+      width: 30%;
+      height: 3px;
+      position: absolute;
+      background-color: white;
+      top: 30%;
+      left: 50%;
+      transform: translate(0%,-50%);
+      transition: all 0.2s ease-in-out;
+    }
+    .bottom-left{
+      width: 30%;
+      height: 3px;
+      position: absolute;
+      background-color: white;
+      bottom: 25%;
+      left: 50%;
+      transform: translate(-100%,-50%);
+      transition: all 0.2s ease-in-out;
+    }
+    .bottom-right{
+      width: 30%;
+      height: 3px;
+      position: absolute;
+      background-color: white;
+      bottom: 25%;
+      left: 50%;
+      transform: translate(0%,-50%);
+      transition: all 0.2s ease-in-out;
+    }
+    .is-active
+    .toggle-botton
+      .middle{
+        opacity: 0;
+      }
+      .top-left{
+        top: 30%;
+        left: 50%;
+        transform: translate(-70%,-50%) rotate(45deg);
+        transform-origin: left center;
+      }
+      .bottom-right{
+        bottom: 25%;
+        left: 50%;
+        transform-origin: right center;
+        transform: translate(-30%,-50%) rotate(45deg);
+      }
+      .top-right{
+        top: 30%;
+        left: 50%;
+        transform-origin: right center;
+        transform: translate(-30%,-50%) rotate(-45deg);
+      }
+      .bottom-left{
+        bottom: 25%;
+        left: 50%;
+        transform-origin: left center;
+        transform: translate(-70%,-50%) rotate(-45deg);             
+      }
+  .is-active + .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+    .main-nav{
+      top: 0%;
+  }
+  .is-active .logo{
+    background-color: white;
+    color: black;
+  }
+.logo{
+  display: block;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  background-color: transparent;
+  left: 30%;
   color: white;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 5px;
+} 
+/*##############################*/
+/*####### MEDIA QUERIES #######*/
+/*##############################*/
+
+@media screen and (max-width: 600px) {
+  .tall
+    {font-size: 40px;}
+    
+  .logo
+    {font-size: 16px;}
+  
+  .overlay .main-nav li
+    {font-size: 25px;}
 }
 .slide-in-blurred-left {
 	-webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
@@ -64,12 +212,19 @@ body {
           margin-left: 5px;
         width: 55%;
 }
+@media screen and ( max-width: 1024px ) {
+.vibrate-1 { width: 55%; }
+}
+@media screen and ( min-width: 1025px) {
+.vibrate-1 { width: 500px;}
+.vibrrate-1 { max-height: 206px;}
+}
 .paragrafo2{
   font-size: 22px;
   color:black;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 1px;
   width: 100%;
 }
 
@@ -97,14 +252,21 @@ h2{
   margin-right: auto;
 }
 .banner-square{
-  max-width: 750px;
-  max-height: 100%;
-  height: 302px;
+  height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 375px;
 }
+
+@media screen and ( max-width: 1024px ) {
+.banner-square { width: 450px; }
+}
+@media screen and ( min-width: 1025px) {
+.banner-square { width: 750px;}
+.banner-square { max-height: 602;}
+}
+
 p{
   font-size: 18px;
 }
@@ -333,14 +495,32 @@ p{
 </style>
 </head>
 <body>
-<!-- Simulate a smartphone / tablet -->
-<div class="grid-container">
-  <div class="topnav">
-    <a href="index.html">Início</a>
-    <a href="biografia.html">Biografia</a>
-    <a href="#contact">Colabore</a>
-    <a class="active" href="turmas.html">Turmas</a>
+  <div class="nav-toggle">
+    <div class="toggle-botton">
+      <div class="top-left"></div>
+      <div class="top-right"></div>
+      <div class="middle"></div>
+      <div class="bottom-left"></div>
+      <div class="bottom-right"></div>
+    </div>
+    <h1 class="logo">Menu</h1>
   </div>
+  
+  <div class="overlay">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Biografia</a></li>
+        <li><a href="#">Colabore</a></li>
+        <li><a href="#">Turmas</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="tall">
+  
+  
   <br>
 <div class="slide-in-blurred-left">
   <h1 class="header"><span style="background-color: #000000">
@@ -367,7 +547,6 @@ p{
   <br>
   <br>
   <img src="bannersquare.png" class="banner-square">
-  <br>
   <br>
   <h2 class="slide-in-blurred-left"><span style="background-color: #000000">Quinta-Feira, 19h às 20h - Nível Básico</h2></span>
 <br>
@@ -404,14 +583,10 @@ p{
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-3 item">
-                    <h3>Links úteis</h3>
-                    <ul>
-                        <li><a href="#">Calendário das Aulas</a></li>
-                        <li><a href="#">Inscreva-se</a></li>
-                        <li><a href="#">Apoie-nos</a></li>
-                    </ul>
-                </div>
+              <div class="col-md-6 item text">
+                <h3>Sobre o site</h3>
+                <h5>Desenvolvido por Osvaldo Barretto F. Dias, filho, com muito orgulho e admiração pela protagonista do site. O intuito dessa página é fazer com que o nosso projeto seja alcançado por mais pessoas, assim como arrecadar fundos para a manutenção do nosso trabalho no ambiente online. Saiba mais sobre a nossa missão clicando <a href="#">aqui</a>!</h5>
+            </div>
                 <div class="col-sm-6 col-md-3 item">
                     <h3>Sobre nós :)</h3>
                     <ul>
@@ -420,18 +595,30 @@ p{
                         
                     </ul>
                 </div>
-                <div class="col-md-6 item text">
-                    <h3>Sobre o site</h3>
-                    <p>Desenvolvido por Osvaldo Barretto F. Dias, filho, com muito orgulho e admiração pela protagonista do site. O intuito dessa página é fazer com que o nosso projeto seja alcançado por mais pessoas, assim como arrecadar fundos para a manutenção do nosso trabalho no ambiente online. Saiba mais sobre a nossa missão clicando <a href="#">aqui</a>!</p>
-                </div>
+                <div class="col-sm-6 col-md-3 item">
+                  <h3>Links úteis</h3>
+                  <ul>
+                      <li><a href="#">Calendário das Aulas</a></li>
+                      <li><a href="#">Inscreva-se</a></li>
+                      <li><a href="#">Apoie-nos</a></li>
+                  </ul>
+              </div>
+              
                 <div class="col item social"><a href="#"><i class="fab fa-instagram"></i></a><a href="mailto:comsylvianoballet@gmail.com"><i class="fas fa-at"></i></a></div>
             </div>
             <p class="copyright">SLO © 2021</p>
         </div>
     </footer>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+</div><script>
+$(function(){
+  $('.toggle-botton').on('click',function(){
+    $('.nav-toggle').toggleClass('is-active')
+  })
+  
+  $('.main-nav li a').on('click',function(){
+    $('.nav-toggle').toggleClass('is-active');
+  })
+})
 </script>
-
 </body>
 </html>
