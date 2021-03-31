@@ -12,12 +12,11 @@
 <style>
 
 body{
-  align-items: center;
+  
   background: #ffffff;
   display: flex;
-  height: 100vh;
   justify-content: center;
-  margin: 0;
+  margin-top: 10px;
 }
 .container {
   cursor: pointer;
@@ -167,7 +166,6 @@ h5{
           color:rgb(255, 255, 255);
           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
           font-size: 26px;
-          grid-area:  main;
           margin:auto;
           
 }
@@ -234,18 +232,6 @@ h2{
 
 p{
   font-size: 18px;
-}
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
-.grid-container {
-  display: grid;
-  grid-template:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
 }
 .footer-dark {
   padding:50px 0;
