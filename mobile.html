@@ -12,8 +12,20 @@
 <style>
 
 body{
-  background-color: rgb(255, 255, 255);
-box-sizing: border-box
+  align-items: center;
+  background: #ffffff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+.container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  order:1;
+  justify-content: flex-start;
 }
 a{
   text-decoration: none;
@@ -64,70 +76,19 @@ h5{
   left: 0;
   width: 150px;
   height: 50px;
-  background-color: black;
+  background-color: #62dfbd;
   z-index: 2;
 }
   .toggle-botton{
     position: absolute;
     height: 100%;
-    width: 30%;
+    width: 40%;
     background-color: rgb(0, 0, 0);
     cursor: pointer;
     display: flex;
     align-items: center;
   }
-    .middle{
-      width: 60%;
-      height: 3px;
-      opacity: 1;
-      position: absolute;
-      background-color: white;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      transition: all 0.2s ease-in-out;
-    }
     
-    .top-left{
-      width: 30%;
-      height: 3px;
-      position: absolute;
-      background-color: white;
-      top: 30%;
-      left: 50%;
-      transform: translate(-100%,-50%);
-      transition: all 0.2s ease-in-out;
-    }
-    .top-right{
-      width: 30%;
-      height: 3px;
-      position: absolute;
-      background-color: white;
-      top: 30%;
-      left: 50%;
-      transform: translate(0%,-50%);
-      transition: all 0.2s ease-in-out;
-    }
-    .bottom-left{
-      width: 30%;
-      height: 3px;
-      position: absolute;
-      background-color: white;
-      bottom: 25%;
-      left: 50%;
-      transform: translate(-100%,-50%);
-      transition: all 0.2s ease-in-out;
-    }
-    .bottom-right{
-      width: 30%;
-      height: 3px;
-      position: absolute;
-      background-color: white;
-      bottom: 25%;
-      left: 50%;
-      transform: translate(0%,-50%);
-      transition: all 0.2s ease-in-out;
-    }
     .is-active
     .toggle-botton
       .middle{
@@ -167,16 +128,20 @@ h5{
   .is-active .logo{
     background-color: white;
     color: black;
+    margin-left: 40%;
+    padding-left: 7%;
+  
+
   }
 .logo{
-  display: block;
-  position: absolute;
-  width: 70%;
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  order:2;
   background-color: transparent;
-  left: 30%;
+  left: 60%;
   color: white;
   line-height: 50px;
+  margin-left: 70px;
   text-align: center;
   font-size: 20px;
   transition: all 0.2s ease-in-out;
@@ -384,6 +349,59 @@ p{
   font-size:13px;
   margin-bottom:0;
 }
+.svg {
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  
+}
+.active svg {
+  transform: rotate(90deg);
+ 
+}
+path {
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+path:nth-child(1) {
+  transform-origin: 36% 40%;
+}
+path:nth-child(2) {
+  stroke-dasharray: 29 299;
+}
+path:nth-child(3) {
+  transform-origin: 35% 63%;
+}
+path:nth-child(4) {
+  stroke-dasharray: 29 299;
+}
+path:nth-child(5) {
+  transform-origin: 61% 52%;
+}
+path:nth-child(6) {
+  transform-origin: 62% 52%;
+}
+.active path:nth-child(1) {
+  transform: translateX(9px) translateY(1px) rotate(45deg);
+}
+.active path:nth-child(2) {
+  stroke-dasharray: 225 299;
+  stroke-dashoffset: -72px;
+}
+.active path:nth-child(3) {
+  transform: translateX(9px) translateY(1px) rotate(-45deg);
+}
+.active path:nth-child(4) {
+  stroke-dasharray: 225 299;
+  stroke-dashoffset: -72px;
+}
+.active path:nth-child(5) {
+  transform: translateX(9px) translateY(1px) rotate(-45deg);
+}
+.active path:nth-child(6) {
+  transform: translateX(9px) translateY(1px) rotate(45deg);
+}
+
 @font-face {
     font-family: 'autographyregular';
     src: url("webfontkit/autography-webfont.woff2") format('woff2'),
@@ -497,11 +515,46 @@ p{
 <body>
   <div class="nav-toggle">
     <div class="toggle-botton">
-      <div class="top-left"></div>
-      <div class="top-right"></div>
-      <div class="middle"></div>
-      <div class="bottom-left"></div>
-      <div class="bottom-right"></div>
+      <div class="container" onclick="this.classList.toggle('active')">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1in" viewBox="0 0 200 200" > 
+              <g stroke-width="6.5" stroke-linecap="round">
+                <path
+                  d="M72 82.286h28.75"
+                  fill="#009100"
+                  fill-rule="evenodd"
+                  stroke="#fff"
+                />
+                <path
+                  d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+                  fill="none"
+                  stroke="#fff"
+                />
+                <path
+                  d="M72 125.143h28.75"
+                  fill="#009100"
+                  fill-rule="evenodd"
+                  stroke="#fff"
+                />
+                <path
+                  d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+                  fill="none"
+                  stroke="#fff"
+                />
+                <path
+                  d="M100.75 82.286h28.75"
+                  fill="#009100"
+                  fill-rule="evenodd"
+                  stroke="#fff"
+                />
+                <path
+                  d="M100.75 125.143h28.75"
+                  fill="#009100"
+                  fill-rule="evenodd"
+                  stroke="#fff"
+                />
+              </g>
+            </svg>
+      </div>
     </div>
     <h1 class="logo">Menu</h1>
   </div>
