@@ -55,7 +55,7 @@ h5{
   
   .main-nav{
     margin: 100px 0 0 20px;
-    position: absolute;
+    position: sticky;
     top: 20%;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
@@ -70,12 +70,12 @@ h5{
         color: rgb(255, 255, 255);
   }
 .nav-toggle{  
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 0;
   width: 150px;
   height: 50px;
-  background-color: #62dfbd;
+  background-color: transparent;
   z-index: 2;
   text-decoration: none;
 }
@@ -135,13 +135,13 @@ h5{
   }
 .logo{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   order:2;
-  background-color:white;
+  background-blend-mode: lighten;
   left: 60%;
+  background-color: white;
   color: white;
   line-height: 50px;
-  margin-left: 70px;
   text-align: center;
   font-size: 20px;
   transition: all 0.2s ease-in-out;
@@ -510,7 +510,7 @@ path:nth-child(6) {
   <div class="nav-toggle">
     <div class="toggle-botton">
       <div class="container" onclick="this.classList.toggle('active')">
-        <svg xmlns="http://www.w3.org/2000/svg" height="1in" viewBox="0 0 200 200" > 
+        <svg xmlns="http://www.w3.org/2000/svg"  height="1in" viewBox="0 0 200 200" > 
               <g stroke-width="6.5" stroke-linecap="round">
                 <path
                   d="M72 82.286h28.75"
